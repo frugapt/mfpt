@@ -1,0 +1,25 @@
+login: &login
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: postgres
+  password:
+
+development:
+  encoding: unicode
+  pool: 5
+  database: mfpt_dev
+  <<: *login
+
+test:
+  encoding: unicode
+  pool: 5
+  database: mfpt_tests
+  <<: *login
+
+production:
+  encoding: unicode
+  pool: <%= ENV['DB_POOL'] || ENV['MAX_THREADS'] || 5 %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: mfpt
+  <<: *login
