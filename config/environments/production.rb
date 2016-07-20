@@ -75,7 +75,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "cdn.mercado.fruga.pt"
+  config.action_controller.asset_host = "d7ptymg0n0po9.cloudfront.net"
   # store assets in a 'folder' instead of bucket root
   #config.assets.prefix = '/assets'
 
