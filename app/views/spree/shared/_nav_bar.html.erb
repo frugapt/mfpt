@@ -1,0 +1,10 @@
+<nav class="navbar" id="top-nav-bar" role="navigation">
+<div class="container-fluid">
+ <ul id="nav-bar" class="nav navbar-nav" data-hook>
+  <li id="home-link" data-hook><%= link_to fa_icon("home", class: "img-thumbnail"), spree.root_path %></li>
+  <li id="link-to-cart" data-hook><noscript><%= link_to fa_icon("shopping-cart", class: "img-thumbnail"), '/cart' %></noscript>&nbsp;</li>
+  <script>Spree.fetch_cart()</script>
+  <li id="search-bar" data-hook><%= render :partial => 'spree/shared/search' %></li>
+</ul>
+</div>
+</nav>

@@ -1,0 +1,31 @@
+$brand-primary: #3d8e8e;
+$brand-success: #669933;
+$brand-info:    #b2e5e5;
+$brand-warning: #ff9900;
+$brand-danger:  #e45353;
+
+$btn-default-bg:     #3d8e8e;
+$btn-default-color:  #3f3f3f;
+
+$btn-default-border: $btn-default-bg;
+$btn-primary-border: $brand-primary;
+$btn-success-border: $brand-success;
+$btn-info-border:    $brand-info;
+$btn-warning-border: $brand-warning;
+$btn-danger-border:  $brand-danger;
+
+$border-radius-base:  2px;
+$border-radius-large: 4px;
+$border-radius-small: 1px;
+
+$font-family-sans-serif: "Ubuntu", sans-serif;
+$font-family-serif:      "Ubuntu", serif;
+$font-family-monospace:  "Ubuntu Mono", monospace;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+#logo {
+    margin-top: 10px;
+}

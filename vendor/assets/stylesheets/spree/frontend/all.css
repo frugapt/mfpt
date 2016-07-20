@@ -3,9 +3,10 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
- *= require spree/frontend
-
+ * This is a manifest file that includes stylesheets for spree_frontend
+ * Spree_bootstrap_frontend overrides all spree’s default css and resets here in favour of bootstrap
+ *= require spree/frontend/fontello
+ *= require spree/frontend/frontend_bootstrap
  *= require_self
  *= require_tree .
- *= require spree/frontend/spree_social
 */
