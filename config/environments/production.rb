@@ -26,7 +26,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -57,9 +57,6 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
-
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -76,4 +73,23 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  config.action_controller.asset_host = "cdn.mercado.fruga.pt"
+  # store assets in a 'folder' instead of bucket root
+  #config.assets.prefix = '/assets'
+
+  # configurar S3
+  one_year = 31557600
+  config.paperclip_defaults = {
+      storage: :s3,
+      s3_headers: { cache_control: "public, max-age=#{one_year}", expires: CGI.rfc1123_date(Time.now + one_year)},
+      s3_storage_class: :reduced_redundancy,
+      s3_host_alias: ENV['MFAWS_BUCKET'],
+      s3_host_name: ENV['MFAWS_HOST'],
+      url: :s3_alias_url,
+      bucket: ENV['MFAWS_BUCKET'],
+      s3_credentials: { access_key_id: ENV['MFAWS_KEY'], secret_access_key: ENV['MFAWS_SECRET'] }
+  }
+
 end
