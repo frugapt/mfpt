@@ -3,10 +3,11 @@
 <title><%= title %></title>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="msapplication-TileColor" content="#cceaee">
+<meta name="msapplication-TileColor" content="#0929a8">
 <meta name="theme-color" content="#3d8e8e">
 <%= tag('meta', name: "msapplication-TileImage", content: asset_path("mstile-144x144.png")) %>
 <%== meta_data_tags %>
+<link rel="manifest" href="manifest.json">
 <%= canonical_tag(current_store.url) %>
 <%= favicon_link_tag 'apple-touch-icon-57x57.png', rel: "apple-touch-icon", sizes: "57x57" %>
 <%= favicon_link_tag 'apple-touch-icon-60x60.png', rel: "apple-touch-icon", sizes: "60x60" %>
