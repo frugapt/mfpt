@@ -22,7 +22,7 @@ store.code = "fruga"
 store.save!
 
 Spree::Config[:address_requires_state]=true
-Spree::Config[:admin_interface_logo]='mfpt-logo-admin.png'
+Spree::Config[:admin_interface_logo]='mfpt-logo-admin.svg'
 Spree::Config[:admin_products_per_page]=10
 Spree::Config[:allow_checkout_on_gateway_error]=false
 Spree::Config[:allow_guest_checkout]=true
@@ -34,7 +34,7 @@ Spree::Config[:checkout_zone]=nil # replace with the name of a zone if you would
 Spree::Config[:company]=false # Request company field for billing and shipping addr
 Spree::Config[:currency]="EUR"
 Spree::Config[:layout]='spree/layouts/spree_application'
-Spree::Config[:logo]='mfpt-logo.png'
+Spree::Config[:logo]='mfpt-logo.svg'
 Spree::Config[:max_level_in_taxons_menu]=1 # maximum nesting level in taxons menu
 Spree::Config[:orders_per_page]=15
 Spree::Config[:properties_per_page]=15
