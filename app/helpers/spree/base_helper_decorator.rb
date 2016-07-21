@@ -1,10 +1,6 @@
 Spree::BaseHelper.module_eval do
   def logo(image_path=Spree::Config[:logo])
-    if Rails.env == "development"
-      image_tag(image_path[0..-4] + "jpg", { class: "img-responsive", alt: "Fruga Portugal" })
-    else
-      content_tag("object", image_tag(image_path[0..-4] + "jpg", { class: "img-responsive", alt: "Fruga Portugal" }), data: image_path(image_path + "z"), type: "image/svg+xml", class: "img-responsive")
-    end
+    image_tag(image_path, { class: "img-responsive", alt: "Fruga Portugal" })
   end
   def body_class
     @body_class ||= content_for?(:sidebar) ? '' : ''
