@@ -4,15 +4,14 @@ $brand-info:    #4e669f;
 $brand-warning: #eda366;
 $brand-danger:  #ed6666;
 
-$btn-default-bg:     #3d8e8e;
-$btn-default-color:  #3f3f3f;
+$btn-default-bg:     #ffdbbd;
+$btn-default-border: #a95e20;
 
-$btn-default-border: $btn-default-bg;
-$btn-primary-border: $brand-primary;
-$btn-success-border: $brand-success;
-$btn-info-border:    $brand-info;
-$btn-warning-border: $brand-warning;
-$btn-danger-border:  $brand-danger;
+$btn-primary-bg: $brand-primary;
+$btn-success-bg: $brand-info;
+$btn-info-bg:    $brand-info;
+$btn-warning-bg: $brand-warning;
+$btn-danger-bg:  $brand-danger;
 
 $border-radius-base:  2px;
 $border-radius-large: 4px;
